@@ -2,6 +2,7 @@ from django.shortcuts import render
 from twitter.models import Twit
 from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
+
 # Create your views here.
 def feed(request):
     posts=Twit.objects.all()
