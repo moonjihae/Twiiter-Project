@@ -3,9 +3,12 @@ from django.conf import settings
 
 # Create your models here.
 class Twit(models.Model):
-    member=models.CharField(max_length=10, blank=True, default='')  
+    member=models.CharField(max_length=20)  
     title=models.CharField(max_length=120)
     text=models.TextField()
+    link=models.TextField()
+    likes=models.BooleanField(default=False)
+
 
     created_at=models.DateTimeField(auto_now_add=True)
     def __str__(self):
@@ -29,3 +32,5 @@ class Twit(models.Model):
 class UploadFileModel(models.Model):
     title = models.TextField(default='')
     file = models.FileField(null=True)
+
+

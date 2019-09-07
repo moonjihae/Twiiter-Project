@@ -25,7 +25,10 @@ urlpatterns = [
     path('jihae/profile',my_profile),
     path('fail/',fail),
     path('feed/<pk>/', detail_feed),
-    path('post',post),
+    path('post',new_feed),
+    path('likes',likes),
+    path (r'^like/$',like, name='like'),
+
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
