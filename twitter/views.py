@@ -19,7 +19,7 @@ def play2(request):
     global count
     count+=1
     user='문지해'
-    diary=['빨래하기-20190717','공공즈 브이앱 보기-20190716','장보기-20190718']
+    diary=['빨래하기-20190717','장보기-20190718']
     return render(request,'play2.html',{'name':user,'cnt':count,'diary':diary})
 
 def my_profile(request):
